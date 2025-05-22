@@ -1,4 +1,4 @@
-ASMtoVerilog
+# ASMtoVerilog
 
 A python script to translate ASM Charts into clean verilog code. The output would be written in ```asm.v``` and the input ASM chart should be represented in XML with the following conditions:
 
@@ -24,7 +24,7 @@ All destinations reference boxes by their id.
 ```
 
 
-Example:
+# Example:
 <StartState>1</StartState>
 
 <StateBoxes>
