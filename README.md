@@ -13,7 +13,7 @@ optional ```type```: ```input``` or ```output```
 ```<StartState>```: The id of the starting ```<StateBox>```.
 ```<StateBox>```: Contains ```id```, ```<Name>```, multiple ```<Statement>```s (Verilog-syntax), and one ```<Destination>```.
 
-<DecisionBox>": Contains id, a boolean ```<Condition>``` (Verilog-syntax), and two destinations:
+```<DecisionBox>```": Contains id, a boolean ```<Condition>``` (Verilog-syntax), and two destinations:
 ```<TrueDestination>```: next box if condition is true
 ```<FalseDestination>```: next box if condition is false
 
