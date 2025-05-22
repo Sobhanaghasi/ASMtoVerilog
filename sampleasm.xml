@@ -1,0 +1,58 @@
+<ASMChart name="MultiplyTwoIntegersWithStart">
+    <Variables>
+        <Variable name="a" size="8" type="input"/>
+        <Variable name="b" size="8" type="input"/>
+        <Variable name="start" size="1" type="input"/>
+        <Variable name="product" size="16" type="output"/>
+        <Variable name="count" size="8"/>
+    </Variables>
+
+    <StartState>1</StartState>
+
+    <StateBoxes>
+        <StateBox id="1">
+            <Name>Init</Name>
+            <Statements>
+                <Statement>product &lt;= 0;</Statement>
+                <Statement>count &lt;= 0;</Statement>
+            </Statements>
+            <Destination>10</Destination>
+        </StateBox>
+
+        <StateBox id="2">
+            <Name>CheckDone</Name>
+            <Destination>11</Destination>
+        </StateBox>
+    </StateBoxes>
+
+    <DecisionBoxes>
+        <DecisionBox id="10">
+            <Condition>start == 0</Condition>
+            <TrueDestination>1</TrueDestination>
+            <FalseDestination>2</FalseDestination>
+        </DecisionBox>
+
+        <DecisionBox id="11">
+            <Condition>count &lt; b</Condition>
+            <TrueDestination>20</TrueDestination>
+            <FalseDestination>12</FalseDestination>
+        </DecisionBox>
+
+        <DecisionBox id="12">
+            <Condition>count == b</Condition>
+            <TrueDestination>1</TrueDestination>
+            <FalseDestination>2</FalseDestination>
+        </DecisionBox>
+    </DecisionBoxes>
+
+    <ConditionBoxes>
+        <ConditionBox id="20">
+            <Name>AddAndIncrement</Name>
+            <Statements>
+                <Statement>product &lt;= product + a;</Statement>
+                <Statement>count &lt;= count + 1;</Statement>
+            </Statements>
+            <Destination>12</Destination>
+        </ConditionBox>
+    </ConditionBoxes>
+</ASMChart>
