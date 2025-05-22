@@ -5,6 +5,7 @@ A python script to translate ASM Charts into clean verilog code. The output woul
 
 ```<ASMChart>```: Root element with a chart name.
 
+
 ```<Variables>```: Lists registers; each ```<Variable>``` has:
 
 ```name```: variable name
@@ -13,15 +14,18 @@ A python script to translate ASM Charts into clean verilog code. The output woul
 
 optional ```type```: ```input``` or ```output```
 
+
 ```<StartState>```: The id of the starting ```<StateBox>```.
 
 ```<StateBox>```: Contains ```id```, ```<Name>```, multiple ```<Statement>```s (Verilog-syntax), and one ```<Destination>```.
+
 
 ```<DecisionBox>```": Contains id, a boolean ```<Condition>``` (Verilog-syntax), and two destinations:
 
 ```<TrueDestination>```: next box if condition is true
 
 ```<FalseDestination>```: next box if condition is false
+
 
 ```<ConditionBox>```: Contains ```id```, ```<Name>```, multiple ```<Statement>```s (Verilog-style), and one ```<Destination>```.
 
