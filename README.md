@@ -1,6 +1,6 @@
 # ASMtoVerilog
 
-A python script to translate ASM Charts into clean verilog code. The output would be written in ```asm.v``` and the input ASM chart should be represented in XML with the following conditions:
+A python script to translate ASM Charts into clean verilog code. Run ```converter.py``` and the output would be written in ```asm.v``` and the input ASM chart should be represented in XML with the following conditions:
 
 
 ```<ASMChart>```: Root element with a chart name.
