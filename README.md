@@ -17,7 +17,7 @@ optional ```type```: ```input``` or ```output```
 ```<TrueDestination>```: next box if condition is true
 ```<FalseDestination>```: next box if condition is false
 
-<ConditionBox>: Contains ```id```, ```<Name>```, multiple ```<Statement>```s (Verilog-style), and one ```<Destination>```.
+```<ConditionBox>```: Contains ```id```, ```<Name>```, multiple ```<Statement>```s (Verilog-style), and one ```<Destination>```.
 
 All destinations reference boxes by their id.
 
