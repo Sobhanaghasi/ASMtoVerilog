@@ -25,6 +25,7 @@ All destinations reference boxes by their id.
 
 
 # Example:
+```
 <StartState>1</StartState>
 
 <StateBoxes>
@@ -73,3 +74,4 @@ All destinations reference boxes by their id.
         <Destination>12</Destination>
     </ConditionBox>
 </ConditionBoxes>
+```
