@@ -2,23 +2,22 @@
 
 A python script to translate ASM Charts into clean verilog code. The output would be written in ```asm.v``` and the input ASM chart should be represented in XML with the following conditions:
 
-```
-<ASMChart>: Root element with a chart name.
 
-<Variables>: Lists registers; each <Variable> has:
-name: variable name
-size: bit width
+```<ASMChart>```: Root element with a chart name.
 
-optional type: "input" or "output"
+```<Variables>```: Lists registers; each ```<Variable>``` has:
+```name```: variable name
+```size```: bit width
+optional ```type```: ```input``` or ```output```
 
-<StartState>: The id of the starting <StateBox>.
-<StateBox>: Contains id, <Name>, multiple <Statement>s (Verilog-syntax), and one <Destination>.
+```<StartState>```: The id of the starting ```<StateBox>```.
+```<StateBox>```: Contains ```id```, ```<Name>```, multiple ```<Statement>```s (Verilog-syntax), and one ```<Destination>```.
 
-<DecisionBox>": Contains id, a boolean <Condition> (Verilog-syntax), and two destinations:
-<TrueDestination>: next box if condition is true
-<FalseDestination>: next box if condition is false
+<DecisionBox>": Contains id, a boolean ```<Condition>``` (Verilog-syntax), and two destinations:
+```<TrueDestination>```: next box if condition is true
+```<FalseDestination>```: next box if condition is false
 
-<ConditionBox>: Contains id, <Name>, multiple <Statement>s (Verilog-style), and one <Destination>.
+<ConditionBox>: Contains ```id```, ```<Name>```, multiple ```<Statement>```s (Verilog-style), and one ```<Destination>```.
 
 All destinations reference boxes by their id.
 ```
